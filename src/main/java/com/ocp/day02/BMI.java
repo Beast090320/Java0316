@@ -16,6 +16,8 @@ public class BMI {
         height = h;
         weight = w;
     }
+
+
     
     // 方法實作區
     // 取得計算後的BMI資料
