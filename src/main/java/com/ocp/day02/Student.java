@@ -7,11 +7,11 @@ public class Student {
     Exam exam;
     
     
-    Student(String name, int age, double height, double weight, int chinese, int math) {
+    Student(String name, int age, double height, double weight) {
         this.name = name;
         this.age = age;
         this.bmi = new BMI(name, height, weight);
-        this.exam = new Exam(name, chinese, math);
+        
     }
     
     void print(){
