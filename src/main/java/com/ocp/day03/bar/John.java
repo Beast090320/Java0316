@@ -1,14 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.ocp.day03.bar;
 
-/**
- *
- * @author MB-study
- */
+
 public class John {
+    public int a = 100;
+    protected int b = 200;
+    int c = 300;
+    private int d = 400;
+    
+    private void print(){
+        System.out.print(a + ", ");
+        System.out.print(b + ", ");
+        System.out.print(c + ", ");
+        System.out.print(d + "\n");
+    }
+    
     
 }
