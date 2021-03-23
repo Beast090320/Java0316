@@ -11,6 +11,11 @@ public class ArrayDemo1 {
         System.out.printf("陣列長度 %d\n", lens);
         //印出陣列長度
         System.out.println(Arrays.toString(scores));
+        //總分
+        int sum = scores[0] + scores[1] + scores[2];
+        //平均
+        double avg = (double)sum / lens;
+        System.out.printf("總分: %d 平均: %.1f\n", sum, avg);
     }
     
 }
