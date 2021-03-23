@@ -8,7 +8,8 @@ public class John {
     int c = 300;
     private int d = 400;
     
-    private void print(){
+    public void print(){
+        System.out.print("John: ");
         System.out.print(a + ", ");
         System.out.print(b + ", ");
         System.out.print(c + ", ");
