@@ -12,6 +12,7 @@ public class ArrayBMICV {
         double[] h = {172, 168, 164, 170, 176};
         double[] w = {62, 57, 58, 64, 64};
         Person[] persons = new Person[5];
+        
 
         for (int i = 0; i < persons.length; i++) {
             //建立一個 Person 物件名為 P
@@ -22,8 +23,17 @@ public class ArrayBMICV {
             System.out.println(persons[i]);
         }
         //印出 BMI 值
+        
         for(Person p : persons){
             System.out.printf("bmi: %.1f\n", p.bmi);
         }
+        //建立 double[] bmis 用來存放所有bmi 的資料
+        double[] bmis = new double[5];
+        for(int i=0;i<persons.length;i++){
+            bmis[i] = persons[i].bmi;
+        }
+        //計算 BMI
+        double bmi_cv = MyMath.cv(bmis);
+        System.out.printf("BMI C.V: %.2f%%\n", bmi_cv*100);
     }
 }
