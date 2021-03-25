@@ -18,7 +18,7 @@ public class ArrayCV4 {
         double stock_cv = MyMath.cv(stock);
         double bonds_cv = MyMath.cv(bonds);
         String result = (stock_avg > bonds_avg) ? "股票" : "公債";
-        
+/*----------------------------------------------------------------------------------------------------        
         double max = 0;
         for (int i = 0; i < stock.length; i++) {
             if (stock[i] > max) {
@@ -31,13 +31,12 @@ public class ArrayCV4 {
                 min = stock[i];
             }
         }        
-
+-----------------------------------------------------------------------------------------------------*/
         System.out.printf("股票: %.2f%% 公債: %.2f%% 「%s」平均獲利率較高\n", stock_avg , bonds_avg , result);
-        System.out.printf("股票: %.2f%% 公債: %.2f%% \n", stock_cv * 100, bonds_cv * 100);
+        System.out.printf("股票: %.2f%% 公債: %.2f%% \n", stock_cv*100 , bonds_cv*100 );
         System.out.printf("獲利穩健的投資商品是: %s\n", stock_cv < bonds_cv ? "股票" : "公債");
-
-        System.out.printf("股票最高獲利率: %.1f %%\n", max);
-        System.out.printf("股票最低獲利率: %.1f %%\n", min);
+        System.out.printf("股票最高獲利率: %.1f %%\n", MyMath.max(stock));
+        System.out.printf("股票最低獲利率: %.1f %%\n", MyMath.min(bonds));
 
     }
 }
