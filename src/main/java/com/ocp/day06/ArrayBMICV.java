@@ -1,5 +1,7 @@
 package com.ocp.day06;
 
+import java.util.Arrays;
+
 /*-------------------------------------------
 1.調查五位學生之身高及體重如下，試比較其分散程度。
             身高：172、168、164、170、176(公分)
@@ -32,7 +34,8 @@ public class ArrayBMICV {
         for(int i=0;i<persons.length;i++){
             bmis[i] = persons[i].bmi;
         }
-        //計算 BMI
+        System.out.println(Arrays.toString(bmis));
+        //計算 BMI_cv
         double bmi_cv = MyMath.cv(bmis);
         System.out.printf("BMI C.V: %.2f%%\n", bmi_cv*100);
     }
