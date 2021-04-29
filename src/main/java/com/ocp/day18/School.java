@@ -3,6 +3,7 @@ package com.ocp.day18;
 import java.util.Arrays;
 import java.util.IntSummaryStatistics;
 import java.util.function.Consumer;
+import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 public class School {
@@ -24,11 +25,12 @@ public class School {
         System.out.printf("老師月薪總和:%d\n",stat.getSum());
         System.out.printf("老師月薪平均:%f\n",stat.getAverage());
         // 不及格總平均與不及格學生和教學老師姓名
+        Predicate<Student> nuPass = x -> x.getScore() < 60;
         Consumer<Student> p = x -> System.out.printf("不及格學生:%s, 分數:%d, 老師:%s\n", x.getName(), x.getScore(), x.getTeacher().getName()); 
         double avg = Arrays.stream(DataCenter.getPeople())
                 .filter(x -> x instanceof Student)
                 .map(x -> (Student)x)
-                .filter(x -> x.getScore() < 60)
+                .filter(nuPass)
                 .peek(p)
                 .mapToInt(Student::getScore)
                 .average()
