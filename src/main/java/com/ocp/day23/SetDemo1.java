@@ -5,6 +5,7 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 public class SetDemo1 {
+
     public static void main(String[] args) {
         Set subjects = new LinkedHashSet();
         subjects.add("國");//string
@@ -17,9 +18,18 @@ public class SetDemo1 {
         Iterator iter = subjects.iterator();
         while (iter.hasNext()) {
             Object next = iter.next();
-            System.out.println(next);
-            
+            //System.out.println(next);
+            if (next == null) {
+                iter.remove();
+                continue;
+            }
+            if (next instanceof Integer) {
+                if(((Integer)next) == 100){
+                    iter.remove();
+                }
+            }
         }
-        
+        System.out.println(subjects);
+
     }
 }
