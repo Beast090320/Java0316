@@ -20,5 +20,9 @@ public class CollectionsDemo {
         Comparator<Integer> comparator = (o1, o2) -> o1 - o2;
         Collections.sort(nums, comparator);
         System.out.println(nums);
+        
+        Collections.sort(nums);
+        Collections.reverse(nums);
+        System.out.println(nums);
     }
 }
