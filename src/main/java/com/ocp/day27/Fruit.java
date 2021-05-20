@@ -4,13 +4,13 @@ public class Fruit {
 
     private String name;
     private int qty;
-
+    private double price;
     public Fruit(String name, int qty, double price) {
         this.name = name;
         this.qty = qty;
         this.price = price;
     }
-    private double price;
+
 
     public String getName() {
         return name;
